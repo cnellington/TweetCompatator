@@ -18,6 +18,6 @@ from django.urls import path, include
 from figures import urls
 
 urlpatterns = [
-    path('', include('figures.urls')),
+    path('', include(('figures.urls', 'figures'), namespace='figures')),
     path('admin/', admin.site.urls),
 ]
